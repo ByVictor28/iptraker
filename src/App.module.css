@@ -28,7 +28,7 @@ textarea:focus, input:focus{
 input[type=text] {
   padding: 1.5rem;
   flex: 1 1 auto;
-  
+  min-width: 2rem;
 }
 input[type=submit] {
   padding: 1.6rem 1.5rem;
@@ -101,13 +101,23 @@ input[type=submit] {
   .Details div:nth-child(2){
     border: none;
   }
+  .Details div:nth-child(1) p{
+    width: 28rem;
+  }
 }
 @media (max-width: 768px){
   .Details{
     grid-template-columns: 1fr;
     bottom: -24rem;
+    width: 70%;
   } 
+  .Details div:nth-child(1) p{
+    width: 100%;
+  }
   .Details div{
     border: none;
   } 
+  .Search{
+    width: 85%;
+  }
 }

@@ -1,0 +1,19 @@
+.Tooltip{
+    position: relative;
+}
+.Tooltip:hover span{
+    visibility: visible;
+    background: rgba(1, 1, 1, .8);
+}
+.Tooltip span{
+    visibility: hidden;
+    z-index: 999;
+    position: absolute;
+    bottom: -2rem;
+    left:0;
+    background: rgba(1, 1, 1, 0);
+    color: white;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+    transition: background 1s ease, visibility 1s linear;
+}

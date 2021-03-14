@@ -3,6 +3,7 @@ import classes from './App.module.css'
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet'
 import axios from "axios"
 import Spiner from "./Spiner/Spiner";
+import Tooltip from "./Tooltip/Tooltip";
 
 function App() {
 
@@ -43,6 +44,8 @@ function App() {
   }
   return (
     <div className="App">
+      
+      
       <div className={classes.Header} style={{backgroundImage:"url(/images/pattern-bg.png)"}}>
         <h1>IP Address Tracker </h1>
         <div className={classes.Search}>
@@ -52,7 +55,7 @@ function App() {
         <div className={classes.Details}> 
           <div>
             <h2>IP ADDRESS</h2>
-            <p>{reqData.ip?reqData.ip:"NOT FOUND"}</p>
+            <Tooltip text={reqData.ip}><p>{reqData.ip?reqData.ip:"NOT FOUND"}</p></Tooltip>
           </div>
           <div>
             <h2>LOCATION</h2>
