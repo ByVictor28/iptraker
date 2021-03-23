@@ -83,7 +83,7 @@ function App() {
           />
           <Marker position={[coords.lat, coords.lon]}>
             <Popup>
-              A pretty CSS3 popup. <br /> Easily customizable.
+              {reqData.ip}
             </Popup>
           </Marker>
         </MapContainer>
